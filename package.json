@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "latest": "npx knex migrate:latest",
+    "mup": "npx knex migrate:up",
+    "mdown": "npx knex migrate:down"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AmplifyMeCo/amplifyme-be.git"
@@ -18,6 +23,12 @@
   },
   "homepage": "https://github.com/AmplifyMeCo/amplifyme-be#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "knex": "^1.0.1",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
